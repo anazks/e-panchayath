@@ -11,4 +11,13 @@ router.get('/Register', function(req, res, next) {
 router.get('/Login', function(req, res, next) {
   res.render('user/Login');
 });
+router.get('/Home', function(req, res, next) {
+  res.render('user/Home');
+});
+router.get('/update-user', function(req, res, next) {
+  res.render('user/updateProfile');
+});
+router.get('/complaint-Register', function(req, res, next) {
+  res.render('user/RegisterComplant');
+});
 module.exports = router;

@@ -157,3 +157,28 @@ fieldset {
   width: 50%;
   margin: auto;
 }
+.sideBar{
+  height: 470px;
+  width: 25%;
+  background-color: #2015bf;
+  margin-top: 5%;
+  margin-left: 2%;
+  position: fixed;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.sideBar ul{
+  color: white;
+  list-style-type: none;
+}
+.sideBar li{
+  padding: 20px;
+  background-color: #2015bf;
+  margin-top: 5px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  font-size: 20px;
+  width: auto;
+  cursor:help
+}
+.sideBar li:hover{
+  background-color: black;
+}
