@@ -20,4 +20,7 @@ router.get('/update-user', function(req, res, next) {
 router.get('/complaint-Register', function(req, res, next) {
   res.render('user/RegisterComplant');
 });
+router.get('/news-feeds', function(req, res, next) {
+  res.render('user/newsFeeds');
+});
 module.exports = router;
