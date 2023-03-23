@@ -182,3 +182,23 @@ fieldset {
 .sideBar li:hover{
   background-color: black;
 }
+.profile{
+  width: 250px;
+  height: 400px;
+  background-color: blue;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  position: fixed;
+  right: 10px;
+  top: 50px;
+}
+.profilePic{
+  margin: auto;
+  margin-left: 2.6%;
+  margin-top: 5px;
+}
+.profileInfo{
+  width: 220px;
+  height: 120px;
+  margin: auto;
+  border:1px solid black;
+}

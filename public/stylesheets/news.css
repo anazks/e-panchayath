@@ -1,0 +1,41 @@
+.newsFeeds{
+    width: 40%;
+    height: 400px;
+    margin-left: 30%;
+    margin-top: 5%;
+    background-color: black;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.bottom{
+    bottom: 0;
+    height: 40px;
+    width: 100%;
+    top: 360px;
+    position: relative;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+}
+.top{
+    bottom: 0;
+    height: 40px;
+    width: 100%;
+    top: 5px;
+    position: relative;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+}
+.likebtn{
+    width: 100px;
+    padding:10px;
+   border: none;
+   background-color: white;
+}
+.cmntBTN{
+    width: 100px;
+    height: 90;
+    padding:10px;
+    border: none;
+    background-color: white;
+}
