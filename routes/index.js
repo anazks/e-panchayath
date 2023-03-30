@@ -14,16 +14,34 @@ router.get('/Login', function(req, res, next) {
 router.get('/Home', function(req, res, next) {
     if(req.session.user){
       let user = req.session.user;
-      console.log(req.session.user)
+      console.log(req.session.user,"session created")
       res.render('user/Home',{user})
     }else{
       res.render('user/Home');
-    }
- 
+    } 
 });
 router.get('/update-user', function(req, res, next) {
-  res.render('user/updateProfile');
+  let sql = "select * from user where id = ?"
+  let userID = req.session.user.id;
+  con.query(sql,[userID],(err,row)=>{
+    if(err){
+      console.log(err)
+    }else{
+      res.render('user/updateProfile',{userData:row[0]});
+    }
+  })
 });
+router.post('/update_profile',(req,res)=>{
+  let id = req.session.user.id;
+  let sql = `update user set ? where id =${id}`
+  con.query(sql,req.body,(err,row)=>{
+    if(err){
+      console.log(err)
+    }else{
+      res.redirect('/Home')
+    }
+  })
+})
 router.get('/complaint-Register', function(req, res, next) {
   res.render('user/RegisterComplant');
 });
@@ -61,5 +79,33 @@ router.post('/Login',(req,res)=>{
       }
     }
   })
+})
+router.post('/add-complaints',(req,res)=>{
+    let data = req.body;
+    let user_id = req.session.user.id;
+    data.user_id= user_id;
+    let sql = "insert into complaints set ?"
+    con.query(sql,data,(err,row)=>{
+      if(err){
+        console.log(err)
+      }else{
+        res.redirect('/Home')
+      }
+    })
+})
+router.get('/Tracking',(req,res)=>{
+    let sql = "select * from complaints where user_id =?"
+    let userid = req.session.user.id;
+    con.query(sql,[userid],(err,row)=>{
+      if(err){
+        console.log(err)
+      }else{
+        res.render('user/Tracking',{trackData:row})
+      }
+    })
+})
+router.get('/logout',(req,res)=>{
+  req.session.user = null;
+  res.redirect('/')
 })
 module.exports = router;

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {{>AuthorityNav}}
+  <div style="width: 100%;display:flex;padding:20px">
+      {{>complaints}}
+
+        <div class="notification_form">
+            <h4>ADD NOTIFICATIONS</h4>
+            <form action="">
+                <input type="email" name="email" placeholder="enter user Email">
+                <input type="text" name="panchayth" placeholder="enter Panchayth name">
+                <input type="date" name="Start_date">
+                <input type="date" name="end_date">
+                <input type="text" placeholder="enter Notification Content"  name="notification">
+                <input type="submit" value="ADD NOTIFICATION" class="notiBtn">
+            </form>
+        </div>
+  </div>
+</body>
+</html>

@@ -7,6 +7,7 @@ const hbs =require('hbs');
 const con = require('./config/Config')
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var adinRouter = require('./routes/admin')
 var session = require('express-session')
 
 var app = express();
@@ -16,6 +17,11 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 hbs.registerPartials(__dirname + "/views/partials");
 
+
+app.all("/admin*",function(req,res,next){
+  req.app.locals.layout = "layout/adminlayout";
+  next();
+})
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -29,7 +35,7 @@ app.use(session({
 }))
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-
+app.use('/admin',adinRouter)
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

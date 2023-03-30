@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<body style="background-color: #2015bf;">
+  
+     {{> usersidebar}}
+            <h1 style="text-align: center;color:white">Track Your Pending Complaints</h1>
+            <div class="Complaint_container"> 
+                {{#each trackData}}
+                    <div class="TrackingCard">
+                        <button class="notify"><i class="fa fa-bell" style="font-size:20px"></i>Notify</button>
+                               <div class="Detail">
+                                     <b>Status</b> <br>
+                                        <span>{{status}}</span>
+                                     <b>Remarks</b> <br>
+                                    
+                                      <b>subject</b> <br>
+                                       <span>{{Subject}}</span>
+                                      <b>Complaints</b>
+                                       <span>{{complaint}}</span>
+                               </div>
+                    </div>
+                    {{/each}}
+            </div>
+
+</body>
+</html>

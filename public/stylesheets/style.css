@@ -202,3 +202,72 @@ fieldset {
   margin: auto;
   border:1px solid black;
 }
+.profileInfo span{
+margin-left: 5%;
+}
+.TrackingCard{
+  width: 200px;
+  height: 250px;
+  border: 1px solid black;
+  margin:auto;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+.Complaint_container{
+  padding-top: 70px;
+  width: 60%;
+  display: flex;
+  margin-left: 30%;
+}
+.notify{
+  width: 90%;
+  margin: auto;
+  height: 30px;
+  border: none;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.notify:hover{
+  background-color: black;
+  color: white;
+}
+.Detail{
+  padding: 20px;
+}
+.loginBox{
+  width: 30%;
+  margin: auto;
+  border: 3px solid rgb(67, 126, 227);
+  padding: 5px;
+  justify-content: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.complaintTable{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.notification_form{
+  width: 25%;
+  padding: 25px;
+  margin-left: 3%;
+  background-color: black;
+  margin: auto;
+}
+.notification_form input {
+  width: 100%;
+  height: 30px;
+  margin-top: 5px;
+  border: 1px solid black;
+  text-align: center;
+}
+.notification_form h4{
+  text-align: center;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.notiBtn{
+  border: none;
+  background-color: rgb(15, 142, 201);
+  color: black;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}

@@ -12,13 +12,13 @@
             <div class="login-page">
   <div class="form">
     <h3>UPDATE USER INFO</h3>
-    <form class="login-form">
-      <input type="text" placeholder="username"/>
-      <input type="password" placeholder="password"/>
-      <input type="password" placeholder="password"/>
-      <input type="password" placeholder="password"/>
-      <input type="password" placeholder="password"/>
-      <input type="password" placeholder="password"/>
+    <form class="login-form" action="/update_profile" method="post">
+      <input type="text" name="name" value={{userData.name}} placeholder="username"/>
+      <input type="text" name="email" value={{userData.email}} placeholder="password"/>
+      <input type="text" name="mobile"  value="{{userData.mobile}}"placeholder="password"/>
+      <input type="text" name="state"  value={{userData.state}} placeholder="password"/>
+      <input type="text" name="district" value={{userData.district}} placeholder="password"/>
+      <input type="text" name="ward" value={{userData.ward}} placeholder="password"/>
       <input type="submit" value="Update" style="background-color: rgb(15, 15, 145);color:white">
       <p class="message">Not registered? <a href="#">Create an account</a></p>
     </form>
