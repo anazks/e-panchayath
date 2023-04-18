@@ -12,7 +12,7 @@
             <div class="login-page">
   <div class="form" >
     <h3>Add Complaints</h3>
-    <form class="login-form" action="/add-complaints" method="post">
+    <form class="login-form" action="/add-complaints" method="post" enctype="multipart/form-data">
       <span>Complaint Type</span>
       <select name="type" id="">
         <option value="GENERAL">GENERAL</option>
@@ -20,8 +20,9 @@
       </select>
       <input type="text" name="subject" placeholder="subject"/>
       <input type="text" name="complaint" placeholder="Complaint"/>
-      <input type="submit" value="Register Complaints" style="background-color: rgb(15, 15, 145);color:white">
-      <p class="message">Not registered? <a href="#">Create an account</a></p>
+      <input type="file" name="img">
+      <input type="submit" value="Register Complaints" style="background-color: rgb(194, 16, 137);color:white">
+      
     </form>
   </div>
 </div>

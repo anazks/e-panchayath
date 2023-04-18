@@ -9,7 +9,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var adinRouter = require('./routes/admin')
 var session = require('express-session')
-
+var fileupload = require('express-fileupload')
 var app = express();
 
 // view engine setup
@@ -22,8 +22,13 @@ app.all("/admin*",function(req,res,next){
   req.app.locals.layout = "layout/adminlayout";
   next();
 })
+app.all("/*",function(req,res,next){
+  req.app.locals.layout = "layout/userLayout";
+  next();
+})
 app.use(logger('dev'));
 app.use(express.json());
+app.use(fileupload())
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));

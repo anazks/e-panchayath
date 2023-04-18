@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <title>Document</title>
+        <style>
+
+            .comnts{
+                width: 40%;
+                height: 100px;
+                background-color: rgb(109, 105, 105);
+                margin: auto;
+                border-radius: 10px;
+                margin-top: 10px;
+            }
+            .dp{
+                width: 30px;
+                height: 30px;
+                border-radius: 15px;
+                
+                background-color: black;
+            }
+            .comnts span{
+                color: white;
+                font-size: 17px;
+            }
+            .dp span{
+                margin-left: 40px;
+            }
+           
+        </style>
+</head>
+<body style="padding:10px">
+    {{>usersidebar}}
+    {{#each row}}
+                <div class="comnts">
+                       <div class="dp"><i class='fas fa-user-alt'></i>
+ <span>{{name}}</span> </div> <br>
+                       <span><b><i>{{cmnt}}</i></b></span>
+                </div>
+    {{/each}}
+</body>
+</html>

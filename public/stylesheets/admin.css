@@ -1,0 +1,38 @@
+.NavBar{
+    width: 100%;
+    height: 80px;
+    background-color: black;
+}
+.NavBar ul{
+    color: white;
+    list-style-type: none;
+    padding: 20px;
+
+}
+.NavBar a{
+    color:white;
+    text-decoration: none;
+    padding: 10px;
+}
+.NavBar li{
+    display: inline;
+    padding: 20px;
+}
+.container{
+    width: 85%;
+    height: auto;
+    padding: 60px;
+    display: flex;
+    gap: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin-top: 20px;
+}
+.container div{
+    width: 250px;
+    height: 130px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: rgb(255, 253, 253);
+}
+.container h5{
+    text-align: center;
+}

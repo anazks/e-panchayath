@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <link rel='stylesheet' href='/stylesheets/userProfile.css' />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {{> adminNav}}
+        <div class="userProfile">
+                <div class="left">
+                    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png" alt="">
+                    <h2 style="text-align:center;color:white">{{userData.name}}</h2>
+                    <a href="/users/approveAuth/{{userData.id}}" class="btn btn-outline-success">Approve</a>
+                    <a href="/users/RejectAuth/{{userData.id}}" class="btn btn-outline-danger">Reject</a>
+                    <a href="/users/waitingAuth/{{userData.id}}" class="btn btn-outline-info">Waiting List</a>
+                </div>
+                <div class="right">
+                        <div class="contents">
+                                <h2><i></i></h2>
+                                <h4>{{userData.email}}</h4>
+                                <h4>{{userData.mobile}}</h4>
+                                <h4>{{userData.gender}}</h4>
+                                <h4>{{userData.state}}</h4>
+                                <h4>{{userData.district}}</h4>
+                                <h4>ward No:{{userData.ward}}</h4>
+                                <h4>ward No:{{userData.position}}</h4>
+                        </div>
+                </div>
+        </div>
+</body>
+</html>

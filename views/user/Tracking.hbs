@@ -10,20 +10,22 @@
 <body style="background-color: #2015bf;">
   
      {{> usersidebar}}
-            <h1 style="text-align: center;color:white">Track Your Pending Complaints</h1>
+            <h1 style="text-align: center;background-color:rgb(220, 17, 162)">Track Your Pending Complaints</h1>
             <div class="Complaint_container"> 
                 {{#each trackData}}
                     <div class="TrackingCard">
                         <button class="notify"><i class="fa fa-bell" style="font-size:20px"></i>Notify</button>
                                <div class="Detail">
                                      <b>Status</b> <br>
-                                        <span>{{status}}</span>
+                                        <span>{{status}}</span> <br>
                                      <b>Remarks</b> <br>
-                                    
+                                        <span>{{response}}</span> <br>
                                       <b>subject</b> <br>
-                                       <span>{{Subject}}</span>
-                                      <b>Complaints</b>
+                                       <span>{{subject}}</span> <br>
+                                        <b>Complaints</b> <br>
                                        <span>{{complaint}}</span>
+                                       <b>Your Complaint ID:</b>
+                                        <span>{{id}}</span>
                                </div>
                     </div>
                     {{/each}}

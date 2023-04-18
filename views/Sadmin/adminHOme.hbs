@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, td {
+  border: 2px solid whitesmoke;
+  margin: auto;
+  width: 70%;
+  margin-top: 3%;
+}
+th{
+    color: aqua;
+    text-align: center;
+}
+td{
+    color: rgb(154, 234, 234);
+}
+.box1 h2{
+    text-align: center;
+}
+.box1{
+  margin-left: 8%;
+}
+    </style>
+</head>
+<body>
+
+    {{> adminNav}}
+
+    <div class="container">
+    
+
+      
+        <div class="box1">
+                <h5>Total Users</h5>
+      <h2>{{data.users}}</h2>
+        </div>
+         <div class="box1">
+                <h5>Total Complaints</h5>
+                <h2>{{data.complaints}}</h2>
+        </div>
+        <div class="box1">
+                 <h5>Total Authorites</h5>
+                 <h2>{{data.Authorites}}</h2>
+        </div>
+
+    </div>
+    
+
+
+    
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Mobile</th>
+    <th>M/F</th>
+    <th>state</th>
+    <th>district</th>
+    <th>Ward</th>
+    <th>position</th>
+    <th>Status</th>
+    <th>action</th>
+  </tr>
+  {{#each row}}
+  <tr>
+    <td>{{name}}</td>
+    <td>{{email}}</td>
+    <td>{{mobile}}</td>
+    <td>{{gender}}</td>
+    <td>{{state}}</td>
+    <td>{{district}}</td>
+    <td>{{ward}}</td>
+    <td>{{position}}</td>
+     <td style="color:red">{{status}}</td>
+    <td><a href="/users/viewAuthority/{{id}}" class="btn btn-outline-primary">View</a></td>
+  </tr>
+ {{/each}}
+</table>
+
+</body>
+</html>

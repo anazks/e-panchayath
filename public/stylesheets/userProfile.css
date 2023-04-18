@@ -1,0 +1,42 @@
+.userProfile{
+    width: 70%;
+    height: 400px;
+    background-color: black;
+    margin: auto;
+    margin-top: 50px;
+    padding: 50px;
+    display: flex;
+    gap: 50px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.left{
+    width: 35%;
+    height: 200px;
+    background-color: antiquewhite;
+}
+.right{
+    width: 50%;
+    height: 300px;
+    background-color: rgb(41, 44, 43);
+    padding: 30px;
+}
+.left img{
+    width: 100%;
+    height: 100%;
+}
+.contents{
+    width: 100%;
+    height: 90%;
+    /* background-color: blue; */
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.contents h2{
+    text-align: center;
+    color: black;
+}
+.contents h4{
+    font-size: 14px;
+    text-align: center;
+    color: white;
+}

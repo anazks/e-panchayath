@@ -7,35 +7,40 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    th{
+      color: white;
+    }
+    td{
+      color: white;
+    }
+    table{
+      border: 1px solid rgb(220, 17, 162);
+    }
+  </style>
 </head>
 <body style="background-color:blue">
   {{> usersidebar}}
 <div class="container">
-  <h2>Your Notification</h2>        
+  <h2 style="text-align: center;background-color:rgb(220, 17, 162)">Your Notification</h2>        
   <table class="table table-bordered" style="margin-top: 20%;">
     <thead>
       <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Email</th>
+        <th>Panchayath</th>
+        <th>Starting Date</th>
+        <th>Ending Date</th>
+        <th>Content</th>
       </tr>
     </thead>
     <tbody>
+      {{#each result}}
       <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
+        <td>{{panchayth}}</td>
+        <td>{{Start_date}}</td>
+        <td>{{end_date}}</td>
+        <td>{{notification}}</td>
       </tr>
-      <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-      </tr>
+{{/each}}
     </tbody>
   </table>
 </div>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .Detail{
+            padding: 22px;
+        }
+        .Detail span{
+            font-style: italics;
+        }
+        .name{
+            width: 100%;
+            height: 26px;
+            background-color: black;
+            text-align: center;
+            color: white;
+        }
+        .btns{
+            padding: 10px;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    {{>adminNav}}
+     <div class="Complaint_container"> 
+                {{#each result}}
+                    <div class="TrackingCard">
+                        {{!-- <button class="notify"><i class="fa fa-bell" style="font-size:20px"></i>Notify</button> --}}
+                               <div style="width:160px" class="Detail">
+                                <div class="name">
+                                    <h5>{{name}}</h5>
+                                </div>
+                                     
+                                        <span>{{email}}</span>
+                                        <span>{{mobile}}</span>
+                                        <span>{{state}}</span>
+                                        <span>{{district}}</span>
+                                        <span>{{position}}</span>
+                                        <span>Ward no <b>{{ward}}</b></span>
+                               </div>
+
+                              <div class="btns">
+                                 <a href="/users/Delete-auth" class="btn btn-outline-danger">Delete</a>
+                              </div>
+                    </div>
+                    {{/each}}
+            </div>
+</body>
+</html>
